@@ -65,15 +65,6 @@ $(document).ready(function () {
             display: true
           },
           position: 'right'
-      }, {
-          id: 'test3chAmpData',
-          type: 'linear',
-          scaleLabel: {
-            labelString: 'test3chAmpData(%)',
-            display: true
-          },
-          position: 'right'
-
         }]
     }
   }

@@ -30,8 +30,8 @@ $(document).ready(function () {
       },
       {
         fill: false,
-        label: 'test3chAmpData',
-        yAxisID: 'test3chAmpData',
+        label: 'AmpData',
+        yAxisID: 'AmpData',
         borderColor: "rgba(24, 120, 40, 1)",
         pointBoarderColor: "rgba(24, 120, 40, 1)",
         backgroundColor: "rgba(24, 120, 40, 0.4)",
@@ -65,9 +65,6 @@ $(document).ready(function () {
             display: true
           },
           position: 'right'
-        }, {
-          id: 'test3chAmpData',
-          type: 'linear'
         }]
     }
   }
@@ -109,9 +106,9 @@ $(document).ready(function () {
         humidityData.shift();
       }
 
-      if (obj.AmpData) {
-        test3chAmpData.push(obj.AmpData);
-      }
+//      if (obj.AmpData) {
+//        test3chAmpData.push(obj.AmpData);
+//      }
       if (test3chAmpData.length > maxLen) {
         test3chAmpData.shift();
       }

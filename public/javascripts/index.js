@@ -31,7 +31,7 @@ $(document).ready(function () {
       {
         fill: false,
         label: 'AmpData',
-        yAxisID: 'AmpData',
+        yAxisID: 'Humidity',
         borderColor: "rgba(24, 120, 40, 1)",
         pointBoarderColor: "rgba(24, 120, 40, 1)",
         backgroundColor: "rgba(24, 120, 40, 0.4)",
@@ -106,9 +106,9 @@ $(document).ready(function () {
         humidityData.shift();
       }
 
-//      if (obj.AmpData) {
-//        test3chAmpData.push(obj.AmpData);
-//      }
+      if (obj.AmpData) {
+        test3chAmpData.push(obj.AmpData);
+      }
       if (test3chAmpData.length > maxLen) {
         test3chAmpData.shift();
       }

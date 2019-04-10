@@ -65,6 +65,9 @@ $(document).ready(function () {
             display: true
           },
           position: 'right'
+        }, {
+          id: 'test3chAmpData',
+          type: 'linear'
         }]
     }
   }

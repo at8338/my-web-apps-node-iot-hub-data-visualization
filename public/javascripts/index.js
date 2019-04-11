@@ -1,7 +1,8 @@
 $(document).ready(function () {
   var timeData = [],
     temperatureData = [],
-    humidityData = [];
+    humidityData = [],
+    test3chAmpData = [];
   var data = {
     labels: timeData,
     datasets: [
@@ -26,6 +27,17 @@ $(document).ready(function () {
         pointHoverBackgroundColor: "rgba(24, 120, 240, 1)",
         pointHoverBorderColor: "rgba(24, 120, 240, 1)",
         data: humidityData
+      },
+      {
+        fill: false,
+        label: 'AmpData',
+        yAxisID: 'Humidity',
+        borderColor: "rgba(24, 120, 40, 1)",
+        pointBoarderColor: "rgba(24, 120, 40, 1)",
+        backgroundColor: "rgba(24, 120, 40, 0.4)",
+        pointHoverBackgroundColor: "rgba(24, 120, 40, 1)",
+        pointHoverBorderColor: "rgba(24, 120, 40, 1)",
+        data: test3chAmpData
       }
     ]
   }
@@ -33,7 +45,7 @@ $(document).ready(function () {
   var basicOption = {
     title: {
       display: true,
-      text: 'Temperature & Humidity Real-time Data',
+      text: 'Temperature & Humidity Real-time Data + test3chAmpData',
       fontSize: 36
     },
     scales: {
@@ -92,6 +104,13 @@ $(document).ready(function () {
       }
       if (humidityData.length > maxLen) {
         humidityData.shift();
+      }
+
+      if (obj.AmpData) {
+        test3chAmpData.push(obj.AmpData);
+      }
+      if (test3chAmpData.length > maxLen) {
+        test3chAmpData.shift();
       }
 
       myLineChart.update();

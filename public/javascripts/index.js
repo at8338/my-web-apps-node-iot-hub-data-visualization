@@ -1,8 +1,7 @@
 $(document).ready(function () {
   var timeData = [],
     temperatureData = [],
-    humidityData = [],
-    test3chAmpData = [];
+    humidityData = [];
   var data = {
     labels: timeData,
     datasets: [
@@ -34,7 +33,7 @@ $(document).ready(function () {
   var basicOption = {
     title: {
       display: true,
-      text: 'Temperature & Humidity Real-time Data + test3chAmpData',
+      text: 'Temperature & Humidity Real-time Data',
       fontSize: 36
     },
     scales: {
